@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "393793766222",
+    "project_id": "krishitantrikapplication",
+    "storage_bucket": "krishitantrikapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393793766222:android:9ea9ca8a6e5085bfa3941f",
+        "android_client_info": {
+          "package_name": "com.example.krishitantrik"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0Vm__W2h_Kk72Jbueyr-6EFPAty7EhM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
