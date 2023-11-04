@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".homeActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="209dp"
+        android:background="@drawable/weather_grey_bg"
+        android:layout_marginHorizontal="33dp"
+        android:layout_marginTop="129dp"
+        android:orientation="horizontal">
+        
+        
+        <LinearLayout
+            android:layout_width="153dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/weatherbg"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:elevation="5dp">
+            <ImageView
+                android:layout_width="126dp"
+                android:layout_height="126dp"
+                android:id="@+id/weatherIV"
+                android:src="@drawable/cloudy"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:text="Delhi,India"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Cloudy"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:text="feels like 20"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
