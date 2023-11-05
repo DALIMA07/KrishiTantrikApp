@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F3E7"
     android:orientation="vertical"
     android:padding="25dp"
     tools:context=".LoginActivity">
+    <!-- android:background="#F8F3E7" -->
+
 
     <TextView
         android:id="@+id/editGoogleLink"
@@ -15,6 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
+        android:textColor="@color/black"
         android:text="Register"
         android:textSize="30dp"
         android:textStyle="bold" />
@@ -24,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
+        android:textColor="@color/black"
         android:text="Please Enter the mobile number for Sign Up"
         android:textSize="18dp" />
 
