@@ -77,6 +77,8 @@ public class OtpverificationActivity extends AppCompatActivity {
 
     //for sending otp
     void sendOtp(String phoneNumber,boolean isResend){
+
+
         setInProgress(true);
 
         PhoneAuthOptions.Builder builder =
@@ -134,7 +136,7 @@ public class OtpverificationActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 setInProgress(false);
                 if(task.isSuccessful()){
-                    Intent intent = new Intent(OtpverificationActivity.this,MainActivity.class);
+                    Intent intent = new Intent(OtpverificationActivity.this,homeActivity.class);
                     intent.putExtra("phone",phoneNumber);
                     startActivity(intent);
                 }else{

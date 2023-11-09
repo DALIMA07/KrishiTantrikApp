@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="400dp"
     android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/rounded_border"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -10,15 +12,15 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/itemName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/itemName"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="1dp"
+            android:text="Soya Bean"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="24dp"
-            android:text="Soya Bean"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,7 +29,7 @@
             android:text="Janki Nagar 5 KM"
             android:textColor="@color/black"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="2dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,14 +38,15 @@
             android:text="6 oct 2023"
             android:textColor="@color/black"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"/>
 
     </LinearLayout>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/green_upward_arrow"/>
+        android:src="@drawable/green_upward_arrow" />
 
 
 </LinearLayout>

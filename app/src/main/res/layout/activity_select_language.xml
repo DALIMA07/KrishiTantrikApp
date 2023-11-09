@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".selectLanguage">
 
     <ImageView
@@ -87,15 +88,6 @@
             android:textStyle="bold"
             android:gravity="center"/>
 
-
-
-
     </LinearLayout>
-
-
-
-        
-
-
 
 </LinearLayout>
