@@ -15,7 +15,7 @@
         android:layout_height="209dp"
         android:background="@drawable/weather_grey_bg"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="129dp"
+        android:layout_marginTop="39dp"
         android:orientation="horizontal">
         
         
@@ -78,6 +78,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -99,6 +100,26 @@
             android:gravity="end"/>
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMarketItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="?attr/actionBarSize"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBottomView"
+            android:background="#918D8D"
+            app:menu="@menu/nav_items"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
 
 
 </LinearLayout>
