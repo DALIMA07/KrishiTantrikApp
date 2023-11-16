@@ -26,7 +26,10 @@
         </activity>
         <activity
             android:name=".homeActivity"
-            android:exported="false" />
+            android:exported="true" />
+        <activity
+            android:name=".weatherActivity"
+            android:exported="true" />
         <activity
             android:name=".onboarding2"
             android:exported="false" />

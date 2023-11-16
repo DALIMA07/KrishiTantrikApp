@@ -41,16 +41,13 @@ public class weatherActivity extends AppCompatActivity {
 
 
         getLocation();
-        try {
+
             getUpdates();
-        } catch (JSONException e) {
-            throw new RuntimeException(e);
-        }
+
 
     }
 
-    private void getUpdates() throws JSONException {
-
+    private void getUpdates() {
         OkHttpClient client = new OkHttpClient();
 
         String url = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + "c067effa089c585b73273fcc7cdc91d1";
@@ -70,15 +67,18 @@ public class weatherActivity extends AppCompatActivity {
                 assert response.body() != null;
                 String responseData = response.body().string();
 
-                // Parse JSON response and update UI
+                try {
+                    JSONObject jsonObject = new JSONObject(responseData);
+                    JSONObject mainObject = jsonObject.getJSONObject("main");
+                    currentTemperature = mainObject.getDouble("temp");
+
+                    // Update UI elements on the main thread
+                    runOnUiThread(() -> currentTemperatureTV.setText(String.valueOf((int) currentTemperature)));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
         });
-
-        String jsonResponse = "";
-        JSONObject jsonObject = new JSONObject(jsonResponse);
-        JSONObject mainObject = jsonObject.getJSONObject("main");
-        currentTemperature = mainObject.getDouble("temp");
-        currentTemperatureTV.setText((int) currentTemperature);
     }
 
 
