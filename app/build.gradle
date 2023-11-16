@@ -48,5 +48,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'com.hbb20:ccp:2.5.1'  // Added extra for giving information of country code
     implementation "com.airbnb.android:lottie:6.1.0" // Added for splash screen
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3' //for weather
+    implementation 'com.google.code.gson:gson:2.9.1' //for realtime weather
 
 }
