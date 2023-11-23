@@ -11,4 +11,6 @@
     <string name="login_failed">"Login failed"</string>
 
     <string name="firstOnboardingText">"Lorem ipsum dolor sit amet consectetur. Mauris bibendum leo senectus mattis ac mauris augue mi. Vulputate in mauris vestibulum accumsan.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

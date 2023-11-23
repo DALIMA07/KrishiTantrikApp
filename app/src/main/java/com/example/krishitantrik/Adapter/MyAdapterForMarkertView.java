@@ -36,12 +36,12 @@ public class MyAdapterForMarkertView extends RecyclerView.Adapter<MyViewHolderFo
         holder.itemName.setText(items.get(position).getItemName());
         holder.itemLocation.setText(items.get(position).getItemLocation());
         holder.itemDate.setText(items.get(position).getDate());
+        holder.itemPrice.setText(items.get(position).getPrice());
     }
 
 
     @Override
     public int getItemCount() {
-
         return items.size();
     }
 }

@@ -37,12 +37,9 @@ public class weatherActivity extends AppCompatActivity {
 
         currentTemperatureTV = findViewById(R.id.currentTemperatureTV);
 
-
-
-
         getLocation();
 
-            getUpdates();
+        getUpdates();
 
 
     }

@@ -6,20 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include layout="@layout/action_bar"/>
 
     <FrameLayout
-        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="?attr/actionBarSize"/>
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/container"
+        android:layout_above="@id/btnBottomView"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnBottomView"
-        android:background="#918D8D"
+        android:layout_alignParentBottom="true"
         app:menu="@menu/nav_items"
-        android:layout_alignParentBottom="true"/>
+        />
+
 
 
 </RelativeLayout>

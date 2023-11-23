@@ -136,7 +136,7 @@ public class OtpverificationActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 setInProgress(false);
                 if(task.isSuccessful()){
-                    Intent intent = new Intent(OtpverificationActivity.this,homeActivity.class);
+                    Intent intent = new Intent(OtpverificationActivity.this,MainActivity.class);
                     intent.putExtra("phone",phoneNumber);
                     startActivity(intent);
                 }else{

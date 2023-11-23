@@ -102,6 +102,7 @@
 
 
         <TextView
+            android:id="@+id/itemPrice"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="15dp"

@@ -15,6 +15,7 @@ public class MyViewHolderForMarketview  extends RecyclerView.ViewHolder {
     public TextView itemName;
     public TextView itemLocation;
     public TextView itemDate;
+    public TextView itemPrice;
 
 
     public MyViewHolderForMarketview(@NonNull View itemView) {
@@ -24,6 +25,8 @@ public class MyViewHolderForMarketview  extends RecyclerView.ViewHolder {
         itemLocation = itemView.findViewById(R.id.itemLocation);
         itemDate = itemView.findViewById(R.id.itemDate);
         increaseIcon = itemView.findViewById(R.id.incrementIcon);
+        itemPrice = itemView.findViewById(R.id.itemPrice);
+
 
     }
 }
