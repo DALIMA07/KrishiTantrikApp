@@ -77,18 +77,19 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <TextView
+            android:layout_marginLeft="5dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:text="than yesterday"/>
 
-
-            <TextView
-                android:layout_marginLeft="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="than yesterday"/>
-
-        </LinearLayout>
+            <Button
+                android:layout_gravity="center"
+                android:backgroundTint="@color/ic_launcher_background"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:text="+10.77"
+                android:textSize="10dp"/>
 
 
     </LinearLayout>
