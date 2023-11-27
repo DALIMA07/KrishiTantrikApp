@@ -1,37 +1,37 @@
 package com.example.krishitantrik;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.krishitantrik.Adapter.MyAdapterForMarkertView;
 import com.example.krishitantrik.Class.Item;
-import com.example.krishitantrik.util.AndroidUtil;
-import com.google.protobuf.Internal;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class homeActivity extends AppCompatActivity {
+public class ViewAllActivity extends AppCompatActivity {
 
+    ImageView backIcon;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_view_all);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //for action bar
-//        ImageView leftIcon = findViewById(R.id.left_icon);
-//        ImageView rightIcon = findViewById(R.id.right_icon);
-        //TextView title = findViewById(R.id.actionbar_title);
+        TextView title = findViewById(R.id.actionbar_title);
+        title.setText("MARKET VIEW");
 
-//        leftIcon.setOnClickListener(v -> AndroidUtil.showToast(getApplicationContext(),"You clicked in left icon"));
-//        rightIcon.setOnClickListener(v -> AndroidUtil.showToast(getApplicationContext(),"You clicked in right icon"));
-        //title.setText("HOME");
+        backIcon = findViewById(R.id.backIcon);
+        backIcon.setOnClickListener((v -> {
+            finish();
+        }));
 
         //items for testing
         List<Item> items = new ArrayList<Item>();
@@ -45,11 +45,10 @@ public class homeActivity extends AppCompatActivity {
         items.add(new Item("Jowar","Janki Nagar 5 KM","05 June 2023","₹ 150/Kg"));
         items.add(new Item("Corn","Janki Nagar 5 KM","26 oct 2023","₹ 220/Kg"));
 
-        RecyclerView recyclerView = findViewById(R.id.recyclerViewMarketItems);
+        RecyclerView recyclerView = findViewById(R.id.recyclerViewMarketItems2);
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new MyAdapterForMarkertView(getApplicationContext(),items));
-
     }
 }

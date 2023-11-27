@@ -1,5 +1,6 @@
 package com.example.krishitantrik.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,10 +12,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.krishitantrik.Adapter.MyAdapterForMarkertView;
 import com.example.krishitantrik.Class.Item;
 import com.example.krishitantrik.R;
+import com.example.krishitantrik.ViewAllActivity;
+import com.example.krishitantrik.weatherActivity;
 import com.google.android.gms.common.internal.Constants;
 
 import java.util.ArrayList;
@@ -23,6 +29,8 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
+TextView viewAll;
+ImageView weatherIV;
 
     private String param1;
     private String param2;
@@ -32,6 +40,8 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         if (getArguments() != null) {
             param1 = getArguments().getString("param1");
             param2 = getArguments().getString("param2");
@@ -68,6 +78,18 @@ public class HomeFragment extends Fragment {
         items.add(new Item("Bajra","Janki Nagar 5 KM","30 oct 2023","₹ 140/Kg"));
         items.add(new Item("Jowar","Janki Nagar 5 KM","05 June 2023","₹ 150/Kg"));
         items.add(new Item("Corn","Janki Nagar 5 KM","26 oct 2023","₹ 220/Kg"));
+
+        weatherIV = view.findViewById(R.id.weatherIV);
+        weatherIV.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), weatherActivity.class);
+            startActivity(intent);
+        });
+
+        viewAll = view.findViewById(R.id.viewAll);
+        viewAll.setOnClickListener((v -> {
+            Intent intent = new Intent(getActivity(),ViewAllActivity.class);
+            startActivity(intent);
+        }));
 
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclerViewMarketItems);

@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/black">
-    
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#A6A3A3"
+    app:menu="@menu/menu_actionbar">
+
         <ImageView
-            android:id="@+id/left_icon"
+            android:id="@+id/backIcon"
+            android:src="@drawable/ic_back_arrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_back_arrow"/>
+            android:layout_marginRight="20dp"/>
 
         <TextView
             android:id="@+id/actionbar_title"
@@ -23,18 +21,9 @@
             android:layout_marginStart="16dp"
             android:textStyle="bold"
             android:layout_centerVertical="true"
-            android:layout_toEndOf="@id/left_icon"
             android:textSize="20dp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"
+            />
 
-        <ImageView
-            android:id="@+id/right_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_menu"
-            android:layout_alignParentEnd="true" />
 
-    </RelativeLayout>
-
-</RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

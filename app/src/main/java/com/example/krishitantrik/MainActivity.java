@@ -3,18 +3,22 @@ package com.example.krishitantrik;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toolbar;
+import android.widget.TextView;
 
 import com.example.krishitantrik.Fragment.BasketFragment;
 import com.example.krishitantrik.Fragment.HandPlantingFragment;
 import com.example.krishitantrik.Fragment.HomeFragment;
 import com.example.krishitantrik.Fragment.MessageBotFragment;
+import com.example.krishitantrik.util.AndroidUtil;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
@@ -36,6 +40,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        TextView title = findViewById(R.id.actionbar_title);
+        title.setText("HOME");
 
         bottomNavigationView  = findViewById(R.id.btnBottomView);
 
@@ -62,5 +72,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_actionbar,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId()==android.R.id.home){
+            finish();
+        }
+        switch(item.getItemId()){
+            case R.id.nav_pest:
+                AndroidUtil.showToast(getApplicationContext(),"You clicked in Nav_Pest");
+                break;
+            case R.id.nav_chat:
+                AndroidUtil.showToast(getApplicationContext(),"You clicked in Nav_chat");
+                break;
+            case R.id.nav_setting:
+                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+                startActivity(intent);
+                AndroidUtil.showToast(getApplicationContext(),"You clicked in Nav_Setting");
+                break;
+        }
+        return true;
     }
 }

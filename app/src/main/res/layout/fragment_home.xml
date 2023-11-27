@@ -91,10 +91,11 @@
             android:textColor="@color/black"
             android:text="Market View"/>
         <TextView
+           android:id="@+id/viewAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="view all"
-            android:textColor="@color/black"
+            android:textColor="@color/purple_700"
             android:layout_margin="16dp"
             android:layout_weight="1"
             android:gravity="end"/>

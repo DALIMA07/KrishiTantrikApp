@@ -10,6 +10,7 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,16 +29,24 @@ public class weatherActivity extends AppCompatActivity {
     double longitude;
     double currentTemperature;
     TextView currentTemperatureTV;
+    ImageView backIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
 
+        TextView title = findViewById(R.id.actionbar_title);
+        title.setText("Weather Information");
+
+        backIcon = findViewById(R.id.backIcon);
+        backIcon.setOnClickListener((v -> {
+            finish();
+        }));
 
         currentTemperatureTV = findViewById(R.id.currentTemperatureTV);
 
-        getLocation();
+        //getLocation();
 
         getUpdates();
 
@@ -88,7 +97,7 @@ public class weatherActivity extends AppCompatActivity {
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             Toast.makeText(this, "Please Provide Location Permission", Toast.LENGTH_SHORT).show();
         }
-        assert bestProvider != null;
+//        assert bestProvider != null;
         Location location = locationManager.getLastKnownLocation(bestProvider);
 
         if (location != null) {
