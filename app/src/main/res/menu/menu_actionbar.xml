@@ -10,5 +10,8 @@
     <item android:id="@+id/nav_setting"
         android:title="Setting" />
 
+    <item android:id="@+id/nav_cropManage"
+        android:title="Crop Management" />
+
 
 </menu>

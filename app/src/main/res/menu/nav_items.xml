@@ -13,7 +13,6 @@
         android:title="Hand Planting"
         android:icon="@drawable/ic_home"/>
 
-
     <item android:id="@+id/nav_messageBot"
         android:title="Message Bot"
         android:icon="@drawable/ic_home"/>

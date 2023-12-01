@@ -98,6 +98,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 AndroidUtil.showToast(getApplicationContext(),"You clicked in Nav_Setting");
                 break;
+            case R.id.nav_cropManage:
+                Intent intent1 = new Intent(MainActivity.this, CropManagementActivity.class);
+                startActivity(intent1);
+                AndroidUtil.showToast(getApplicationContext(),"You clicked in Nav_CropManagement");
+                break;
         }
         return true;
     }
